@@ -14,3 +14,7 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('lists', function(){
+    return App\Listing::all();
+});

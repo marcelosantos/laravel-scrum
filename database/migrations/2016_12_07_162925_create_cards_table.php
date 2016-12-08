@@ -15,8 +15,8 @@ class CreateCardsTable extends Migration
     {
         Schema::create('cards', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('list_id')->unsigned();
-            $table->foreign('list_id')->references('id')->on('listings');
+            $table->integer('listing_id')->unsigned();
+            $table->foreign('listing_id')->references('id')->on('listings');
             $table->string('title');
             $table->text('description');
             $table->integer('story_points');
